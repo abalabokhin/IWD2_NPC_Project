@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/iwd2npc/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/116-iwd2-npc-project/~
 
-VERSION ~Test_Build_1_for_v7~
+VERSION ~v7~
 
 README ~iwd2npc/readme-iwd2npc.html~
 
@@ -963,7 +963,7 @@ COPY_EXISTING_REGEXP GLOB ~^nord0[0-4][0-9]\.wav$~   ~sounds/sir_nord~
 COPY_EXISTING_REGEXP GLOB ~^vale0[0-4][0-9]\.wav$~   ~sounds/valeero~
 
 // iwd2ee compat
-ACTION_IF FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN // modifications from the ALWAYS block
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~1000~ BEGIN // iwd2ee core
 
   INCLUDE ~iwd2npc/lib/iwd2ee_compat.tpa~
   
